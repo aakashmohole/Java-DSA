@@ -4,7 +4,7 @@ public class validPalindrom125 {
     public static void main(String[] args){
         String s = "A man, a plan, a canal: Panama";
         if (isPalindrome(s)){
-            System.out.println("Pelindrom");
+            System.out.println("Palindrome");
         }
     }
     public static boolean isPalindrome(String s) {
