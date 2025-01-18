@@ -1,7 +1,5 @@
 package Contest;
 
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class contest148MaximumDifferenceBetweenAdjacentElementsinaCircularArray {
     public static void main(String[] args) {
