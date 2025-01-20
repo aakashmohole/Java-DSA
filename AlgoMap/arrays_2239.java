@@ -18,18 +18,6 @@ public class arrays_2239 {
             }
         }
 
-
-
-
-//        int closest = nums[0];
-//        for (int i = 1; i < nums.length; i++) {
-//            if (Math.abs(nums[i]) < Math.abs(closest)) {
-//                closest = nums[i]; // Update if a closer number is found
-//            } else if (Math.abs(nums[i]) == Math.abs(closest) && nums[i] > closest) {
-//                closest = nums[i]; // Prefer positive number in case of tie
-//            }
-//        }
-
         return closest;
     }
 }
