@@ -6,20 +6,21 @@ public class best_time_to_buy_sell_stock {
         System.out.println(find(prices));
     }
     static int find(int[] price){
-        int smallPrice = price[0];
-        int overAllProfit = 0;
+
+        int minPrice = Integer.MAX_VALUE;
         int todayProfit = 0;
+        int overAllProfit = 0;
 
         for (int i = 0; i < price.length; i++) {
-            if(price[i] < smallPrice){
-                smallPrice = price[i];
+            if (price[i] < minPrice){
+                minPrice = price[i];
             }
-            todayProfit = price[i] - smallPrice;
-            if (overAllProfit < todayProfit){
+            todayProfit = price[i] - minPrice;
+
+            if (todayProfit > overAllProfit){
                 overAllProfit = todayProfit;
             }
         }
         return overAllProfit;
-
     }
 }
