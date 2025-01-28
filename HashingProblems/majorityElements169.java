@@ -1,4 +1,4 @@
-package HashMapProblems;
+package HashingProblems;
 import java.util.*;
 public class majorityElements169 {
     public static void main(String[] args){

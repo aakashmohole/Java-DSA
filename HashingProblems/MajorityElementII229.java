@@ -1,4 +1,4 @@
-package HashMapProblems;
+package HashingProblems;
 
 import java.util.*;
 
