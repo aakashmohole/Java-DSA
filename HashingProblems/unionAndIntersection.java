@@ -9,8 +9,8 @@ public class unionAndIntersection {
 
 //        findUnion(arr1, arr2);
 //        findIntersect(arr1, arr2);
-        System.out.println(Arrays.toString(findIntersectList(arr1, arr2)));
-
+//        System.out.println(Arrays.toString(findIntersectList(arr1, arr2)));
+        System.out.println(removeDuplicates(arr2));
 
     }
     public static void findUnion(int[] arr1, int[] arr2){
@@ -78,5 +78,12 @@ public class unionAndIntersection {
         }
 
         return res;
+    }
+    public static int removeDuplicates(int[] nums) {
+        HashSet<Integer> set =  new HashSet<>();
+        for(int i =0; i < nums.length; i++){
+            set.add(nums[i]);
+        }
+        return set.size();
     }
 }
