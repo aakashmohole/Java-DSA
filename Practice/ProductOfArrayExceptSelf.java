@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class ProductOfArrayExceptSelf {
     public static void main(String[] args) {
-        int[] arr = {10,3,5,6,2};
-        System.out.println(find(arr));
+        int[] arr = {1,2,3,4};
+        System.out.println(Arrays.toString(productExceptSelf(arr)));
     }
     static ArrayList<Integer> find(int[] arr){
         ArrayList<Integer> list = new ArrayList<>();
@@ -18,4 +18,16 @@ public class ProductOfArrayExceptSelf {
 
         return list;
     }
+
+        public static int[] productExceptSelf(int[] nums) {
+            int sum = 0;
+            for (int i = 0; i < nums.length; i++) {
+                for (int j = 0; j < nums.length; j++) {
+                    if (i!=j){
+                        nums[i] = (nums[i] * nums[j]);
+                    }
+                }
+            }
+            return nums;
+        }
 }
