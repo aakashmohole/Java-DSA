@@ -39,6 +39,18 @@ public class rotateMatrix90Degrees48 {
         printMatrix(matrix);
     }
 
+    public static void rotateWithFor(int[][] matrix){
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int[][] ans = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                ans[i][n-1-i] = matrix[i][j];
+            }
+        }
+    }
+
     public static void printMatrix(int[][] matrix){
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
