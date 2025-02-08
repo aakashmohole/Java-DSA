@@ -17,6 +17,6 @@ public class largestSubarrayWith0Sum {
                 map.put(sum, i);
             }
         }
-        System.out.println("Largest sunarray is : " + len);
+        System.out.println("Largest subarray is : " + len);
     }
 }

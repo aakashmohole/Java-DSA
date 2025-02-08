@@ -7,6 +7,7 @@ package stringProblems;
 */
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class longestSubstringWithoutRepeatingCharacters3 {
@@ -34,5 +35,7 @@ public class longestSubstringWithoutRepeatingCharacters3 {
         }
         return max_length;
     }
+
+
 
 }

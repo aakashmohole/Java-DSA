@@ -9,10 +9,12 @@ package stringProblems;
 * */
 
 
+import java.util.HashMap;
+
 public class validAnagram {
     public static void main(String[] args) {
         String s = "anagram", t= "nagaram";
-        System.out.println(find(s, t));
+        System.out.println(validate(s, t));
     }
 
     public  static boolean find(String s, String t){
@@ -36,5 +38,26 @@ public class validAnagram {
             }
         }
         return true;
+    }
+
+    public static boolean validate(String s, String t){
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);
+        }
+        for (int i = 0; i < t.length(); i++) {
+            if (map.get(t.charAt(i)) != null){
+                if (map.get(s.charAt(i)) == 1){
+                    map.remove(t.charAt(i));
+                }
+                else {
+                    map.put(t.charAt(i), map.get(t.charAt(i)) -1);
+                }
+            }else {
+                return false;
+            }
+        }
+        return map.isEmpty();
     }
 }
