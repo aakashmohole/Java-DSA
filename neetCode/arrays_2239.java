@@ -1,4 +1,4 @@
-package AlgoMap;
+package neetCode;
 
 
 public class arrays_2239 {

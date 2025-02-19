@@ -1,4 +1,4 @@
-package AlgoMap;
+package neetCode;
 
 import java.util.ArrayList;
 import java.util.List;

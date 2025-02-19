@@ -1,13 +1,11 @@
 package stringProblems;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class groupAnagrams49 {
     public static void main(String[] args) {
         String[] strs1 = {"eat", "tea", "tan", "ate", "nat", "bat"};
-        System.out.println(groupAnagrams(strs1));
+        System.out.println(groupAnagramsHashMap(strs1));
     }
     public static List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> result = new ArrayList<>();
@@ -40,5 +38,27 @@ public class groupAnagrams49 {
         }
 
         return result;
+    }
+    public static List<List<String>> groupAnagramsHashMap(String[] strs) {
+        HashMap<String, List<String>> map = new HashMap<>();
+        for (int i = 0; i < strs.length; i++) {
+            String s = strs[i];
+
+            //convert string to char array to sort this string
+            char[] ca = s.toCharArray();
+
+            // sort char
+            Arrays.sort(ca);
+
+            //convert char array to string as key
+            String key = String.valueOf(ca);
+
+            //add values to hashmap
+            if (!map.containsKey(key)){
+                map.put(key, new ArrayList<>());
+            }
+            map.get(key).add(s);
+        }
+        return new ArrayList<>(map.values());
     }
 }

@@ -1,4 +1,4 @@
-package AlgoMap;
+package neetCode;
 
 public class array_392IsSubsequence {
     public static void main(String[] args) {

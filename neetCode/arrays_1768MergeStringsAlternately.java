@@ -1,4 +1,4 @@
-package AlgoMap;
+package neetCode;
 
 public class arrays_1768MergeStringsAlternately {
     public static void main(String[] args) {
