@@ -6,17 +6,9 @@ import java.util.HashMap;
 
 public class TwoSum {
     public static void main(String[] args) {
-        int[] arr = {3,2,4};
-        int target  = 6;
+        int[] arr = {1,2,3,4};
+        int target  = 3;
         System.out.println(Arrays.toString(twoSumWithHashMap(arr, target)));
-//        for (int i = 0; i < arr.length; i++) {
-////            for (int j = i+1; j < arr.length; j++) {
-////                if(arr[i] + arr[j] == target) {
-////                    int[] a = {i, j};
-////                    System.out.println(Arrays.toString(a));
-////                }
-////            }
-////        }
     }
     public static int[] twoSum(int[] nums, int target){
         Arrays.sort(nums);
@@ -45,5 +37,17 @@ public class TwoSum {
         }
         return new int[]{};
     }
-
+    public static int[] twoSumN(int[] numbers, int target) {
+        int[] ans = {};
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers.length; j++) {
+                if (i != j) {
+                    if (numbers[i] + numbers[j] == target) {
+                        ans = new int[]{numbers[i], numbers[j]};
+                    }
+                }
+            }
+        }
+        return ans;
+    }
 }
