@@ -25,6 +25,7 @@ public class permutation {
             findPermutation(newStr, ans+curr);
         }
     }
+
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         helper(nums,0,result);
