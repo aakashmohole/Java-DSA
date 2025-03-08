@@ -37,6 +37,8 @@ public class findSubset {
         // yes
         subList.add(nums[i]);
         addSubsets(nums, i+1,ansList, subList);
+
+        //backtrack
         subList.remove(subList.size()-1);
 
         //no
