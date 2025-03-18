@@ -20,7 +20,7 @@ class Horse extends Animals {
     }
 }
 
-class chicken extends Animals{
+class chicken extends Animals {
     @Override
     void walk() {
         System.out.println("walk on 2 leg");
