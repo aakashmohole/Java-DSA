@@ -2,10 +2,10 @@ package Patterns;
 
 /* In this problem statement we create pattern like
 
-*
-* *
-* * *
-* * * *
+ *
+ * *
+ * * *
+ * * * *
 
 */
 
