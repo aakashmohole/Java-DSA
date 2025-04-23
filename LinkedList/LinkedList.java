@@ -28,6 +28,9 @@ public class LinkedList {
         System.out.println(recSearch(3));
         System.out.println(recSearch(6));
 
+        ll.reverse();
+        ll.print();
+
     }
     public static class Node{
         int data;
@@ -176,6 +179,21 @@ public class LinkedList {
     }
     public static int recSearch(int key){
         return helper(head, key);
+    }
+
+//REVERES
+    public static void reverse(){
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev; //reverse done here
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
     }
 }
 
