@@ -21,6 +21,13 @@ public class LinkedList {
 
         ll.removeLast();
         ll.print();
+
+        System.out.println(itrSearch(3));
+        System.out.println(itrSearch(6));
+
+        System.out.println(recSearch(3));
+        System.out.println(recSearch(6));
+
     }
     public static class Node{
         int data;
@@ -135,6 +142,40 @@ public class LinkedList {
         size--;
         return val;
 
+    }
+
+// SEARCH METHODS
+    public static int itrSearch(int key){
+        Node temp = head;
+        int i =0;
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+
+        //key not found
+        return -1;
+    }
+
+    public static int helper(Node head, int key){
+        if(head == null){
+            return -1;
+        }
+
+        if(head.data == key){
+            return 0;
+        }
+        int ind = helper(head.next, key);
+        if (ind == -1){
+            return -1;
+        }
+        return ind+1;
+    }
+    public static int recSearch(int key){
+        return helper(head, key);
     }
 }
 
