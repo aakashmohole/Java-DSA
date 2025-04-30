@@ -73,7 +73,7 @@ public class findAndRemoveNthNodeFromEnd  {
 
         //size - n
         int i =1;
-        int iToFind = sz-n;
+        int iToFind = sz - n;
         Node prev = head;
 
         while (i < iToFind){
