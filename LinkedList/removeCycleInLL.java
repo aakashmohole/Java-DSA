@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class removeCycleInLL {
+public class  removeCycleInLL {
     public static void main(String[] args) {
         head = new Node(1);
         Node temp = new Node(2);
