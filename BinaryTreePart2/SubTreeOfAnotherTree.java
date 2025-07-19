@@ -1,4 +1,4 @@
-package BinaryTreePart1;
+package BinaryTreePart2;
 
 public class SubTreeOfAnotherTree {
     static class Node{
