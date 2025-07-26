@@ -35,6 +35,8 @@ public class detectCycleLL {
         }
         System.out.println("null");
     }
+
+
     public static boolean isCycle(){ //floyd's CFA 
         Node slow = head;
         Node fast = head;

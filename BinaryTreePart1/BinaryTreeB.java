@@ -67,13 +67,13 @@ public class BinaryTreeB {
 
             Queue<Node> q = new LinkedList<>();
 
-            q.add(root);
-            q.add(null);
+            q.add(root); // add first root
+            q.add(null); // after add null for next line
 
             while(!q.isEmpty()){
                 Node currNode = q.remove();
                 if(currNode == null){
-                    System.out.println();
+                    System.out.println();  //
                     if (q.isEmpty()){
                         break;
                     }else {

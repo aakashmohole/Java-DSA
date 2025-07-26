@@ -1,6 +1,7 @@
 package BinarysearchProblems;
 
-public class searchInsertPosition {
+public class
+searchInsertPosition {
     public static void main(String[] args) {
         int[] arr = {1,2,4,7};
         int x = 1;
