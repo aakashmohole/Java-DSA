@@ -28,6 +28,19 @@ public class transformToSumTree {
 
         return val;
     }
+
+    public static int sum(Node root) {
+        if(root == null){
+            return 0;
+        }
+
+        int leftSum = sum(root.left);
+        int rightSum = sum(root.right);
+
+        root.val += leftSum + rightSum;
+
+        return root.val;
+    }
     public static void preorder(Node rooot){
         if(rooot == null){
             return;
@@ -61,6 +74,9 @@ public class transformToSumTree {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
+        preorder(root);
+        System.out.println();
+//        sum(root);
         transform(root);
         preorder(root);
     }
