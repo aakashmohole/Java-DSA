@@ -42,6 +42,14 @@ public class connectComponents {
         graph[5].add(new Edge(5,6,1));
 
         graph[6].add(new Edge(6,5,1));
+         /*
+                1 ----- 3
+               /        | \
+              0         |   5 --- 6
+               \        | /
+                 2 ---- 4
+
+        */
     }
     public static void bfs(ArrayList<Edge>[] graph){
         boolean vis[] = new boolean[graph.length];
