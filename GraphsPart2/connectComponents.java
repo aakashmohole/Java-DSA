@@ -1,8 +1,11 @@
-package GraphsPart1;
+package GraphsPart2;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class DFS {
+public class connectComponents {
+
     static class Edge{
         int src, dest, wt;
         public Edge(int src, int dest, int wt){
@@ -40,34 +43,37 @@ public class DFS {
 
         graph[6].add(new Edge(6,5,1));
     }
+    public static void bfs(ArrayList<Edge>[] graph){
+        boolean vis[] = new boolean[graph.length];
+        for (int i = 0; i < graph.length; i++) {
+            if (!vis[i]){
+                bfsUtil(graph, vis);
+            }
+        }
+    }
+    public static void bfsUtil(ArrayList<Edge>[] graph, boolean vis[]){
+        Queue<Integer> q= new LinkedList<>();
+        q.add(0); //add first ele
 
-    public static void dfs(ArrayList<Edge> graph[], int curr, boolean vis[]){
-        //visit node
-        System.out.print(curr + " ");
-        vis[curr] = true;
+        while(!q.isEmpty()){
+            int curr = q.remove();
 
-        for (int i =  0; i < graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
-            if(!vis[e.dest]){
-                dfs(graph, e.dest, vis);
+            if(!vis[curr]){
+                System.out.print(curr + " ");
+                vis[curr] = true;
+                for (int i = 0; i < graph[curr].size(); i++) {
+                    Edge e = graph[curr].get(i);
+                    q.add(e.dest);
+                }
             }
         }
     }
 
     public static void main(String[] args) {
-        /*
-                1 ----- 3
-               /        | \
-              0         |   5 --- 6
-               \        | /
-                 2 ---- 4
-
-        */
-
         int V = 7;
         ArrayList<Edge> graph[] = new ArrayList[V];
         creteGraph(graph);
 
-        dfs(graph, 0 , new boolean[V]);
+        bfs(graph);
     }
 }
